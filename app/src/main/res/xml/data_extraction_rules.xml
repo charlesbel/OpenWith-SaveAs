@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Ce fichier est nécessaire pour les applications ciblant Android 12 (API 31) et plus.
+    Il définit les règles pour la sauvegarde et la restauration des données de l'application.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!--
+            Sauvegarder les SharedPreferences. Dans notre cas, cela inclut l'URI
+            du dernier dossier de sauvegarde utilisé.
+        -->
+        <include domain="sharedpref" path="."/>
+    </cloud-backup>
+    <device-transfer>
+        <include domain="sharedpref" path="."/>
+    </device-transfer>
+</data-extraction-rules>

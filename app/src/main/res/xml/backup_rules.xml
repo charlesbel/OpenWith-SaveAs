@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Ce fichier est nécessaire pour les applications ciblant Android 12 (API 31) et plus.
+    Il définit les règles pour la sauvegarde complète du contenu de l'application (Full Backup).
+-->
+<full-backup-content>
+    <!--
+        Inclure les SharedPreferences dans la sauvegarde.
+        Ceci est crucial pour conserver l'URI du dernier dossier de sauvegarde
+        utilisé lorsque l'utilisateur change de téléphone ou réinstalle l'application.
+    -->
+    <include domain="sharedpref" path="."/>
+</full-backup-content>
