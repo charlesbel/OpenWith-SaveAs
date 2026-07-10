@@ -20,5 +20,10 @@ local.properties
 *.keystore
 *.jks
 
+# Exceptions nécessaires au build/release
+!gradle/wrapper/gradle-wrapper.jar
+!artifacts/
+!artifacts/*.apk
+
 # Fichiers de log
 *.log
