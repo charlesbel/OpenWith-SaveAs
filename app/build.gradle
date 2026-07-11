@@ -5,14 +5,23 @@ plugins {
 
 android {
     namespace 'com.charles.savefile'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.charles.savefile"
         minSdk 24
-        targetSdk 34
+        targetSdk 36
         versionCode 1
         versionName "1.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("release-keystore.jks")
+            storePassword "android"
+            keyAlias "release"
+            keyPassword "android"
+        }
     }
 
     compileOptions {
@@ -27,6 +36,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
