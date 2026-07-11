@@ -19,6 +19,10 @@ local.properties
 *.jar
 *.keystore
 *.jks
+!gradle/wrapper/gradle-wrapper.jar
+!app/release-keystore.jks
+!release-apk/
+!release-apk/*.apk
 
 # Fichiers de log
 *.log
